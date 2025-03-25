@@ -9,7 +9,21 @@
 			"extensions": [
 				"ms-vscode.vscode-typescript-next"
 			]
-		}
+		},
+
+	},
+	"mounts": [
+"source=${localEnv:HOME}/.config/gcloud,target=/workspaces/config/gcloud,type=bind"
+],
+"containerEnv": {
+   "GOOGLE_APPLICATION_CREDENTIALS":
+   "/workspaces/config/gcloud/application_default_credentials.json"
+}
+
+//[/home/luismurillo/.config/gcloud/application_default_credentials.json]
+	
+		// Add your own dotfiles to the container. See https://aka.ms/devcontainers/dotfiles.
+
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -26,4 +40,4 @@
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
-}
+
